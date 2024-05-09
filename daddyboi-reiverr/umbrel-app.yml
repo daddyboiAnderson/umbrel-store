@@ -6,8 +6,8 @@ icon: https://svgur.com/i/mvA.svg
 category: Development
 version: "0.8.1"
 port: 9494
-description: >-
-Reiverr is a project that aims to create a single UI for interacting with TMDB, Jellyfin, Radarr and Sonarr, as well as be an alternative to Overseerr.
+description: >
+  Reiverr is a project that aims to create a single UI for interacting with TMDB, Jellyfin, Radarr and Sonarr, as well as be an alternative to Overseerr.
 
 developer: aleksilassila
 website: https://github.com/aleksilassila/reiverr
@@ -19,10 +19,10 @@ gallery:
   - https://i.imgur.com/yyVG0Jb.jpeg
   - https://i.imgur.com/yyVG0Jb.jpeg
   - https://i.imgur.com/yyVG0Jb.jpeg
-releaseNotes: >-
-[PERF] Progressive Rendering - improved page load times by @jordanf97 in #102
-update playwright version, add basic tests by @AxiomPraxis in #103
-Fixed a styling issue regarding some carousels not having padding
+releaseNotes: >
+  [PERF] Progressive Rendering - improved page load times by @jordanf97 in #102
+  update playwright version, add basic tests by @AxiomPraxis in #103
+  Fixed a styling issue regarding some carousels not having padding
 dependencies: []
 path: ""
 defaultUsername: ""
