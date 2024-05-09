@@ -11,10 +11,4 @@ services:
     volumes:
       - ${APP_DATA_DIR}/config:/config
     enviroment:
-      PUBLIC_RADARR_API_KEY=apikey
-      PUBLIC_RADARR_BASE_URL=http://IP-ADRESS:7878
-      PUBLIC_SONARR_API_KEY=apikey
-      PUBLIC_SONARR_BASE_URL=http://IP-ADRESS:8989
-      PUBLIC_JELLYFIN_API_KEY=apikey
-      PUBLIC_JELLYFIN_BASE_URL=http://IP-ADRESS:8096
     restart: unless-stopped
