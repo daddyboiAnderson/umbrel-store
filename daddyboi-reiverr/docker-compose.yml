@@ -1,16 +1,20 @@
-version: '3.4'
+version: '3.8'
+
+name: reiverr
+
 services:
-    speedtest-tracker:
-        container_name: speedtest-tracker
-        ports:
-            - 8080:80
-            - 8443:443
-        environment:
-            - PUID=1000
-            - PGID=1000
-            - DB_CONNECTION=sqlite
-        volumes:
-            - ${APP_DATA_DIR}/config:/config
-            - /path/to-custom-ssl-keys:/config/keys
-        image: lscr.io/linuxserver/speedtest-tracker:latest
-        restart: unless-stopped
+  reiverr:
+    image: ghcr.io/aleksilassila/reiverr:latest
+    container_name: reiverr
+    ports:
+      - 9494:9494
+    volumes:
+      - ${APP_DATA_DIR}/config:/config
+    enviroment:
+      PUBLIC_RADARR_API_KEY=apikey
+      PUBLIC_RADARR_BASE_URL=http://IP-ADRESS:7878
+      PUBLIC_SONARR_API_KEY=apikey
+      PUBLIC_SONARR_BASE_URL=http://IP-ADRESS:8989
+      PUBLIC_JELLYFIN_API_KEY=apikey
+      PUBLIC_JELLYFIN_BASE_URL=http://IP-ADRESS:8096
+    restart: unless-stopped
