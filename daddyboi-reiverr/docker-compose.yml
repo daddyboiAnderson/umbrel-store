@@ -10,5 +10,4 @@ services:
       - 9494:9494
     volumes:
       - ${APP_DATA_DIR}/config:/config
-    enviroment:
     restart: unless-stopped
