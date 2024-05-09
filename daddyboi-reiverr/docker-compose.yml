@@ -6,8 +6,7 @@ services:
       APP_PORT: 9494
       PROXY_AUTH_ADD: 'false'
   server:
-    image: >
-      ghcr.io/aleksilassila/reiverr:latest
+    image: ghcr.io/aleksilassila/reiverr:latest
     volumes:
       - ${APP_DATA_DIR}/config:/config
     restart: unless-stopped
