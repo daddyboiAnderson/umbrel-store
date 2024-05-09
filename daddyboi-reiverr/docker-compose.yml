@@ -1,13 +1,13 @@
-version: '3.8'
-
-name: reiverr
+version: '3.7'
 
 services:
-  reiverr:
+  app_proxy:
+    environment:
+      APP_HOST: reiverr_server_1
+      APP_PORT: 9494
+      PROXY_AUTH_ADD: "false"
+  server:
     image: ghcr.io/aleksilassila/reiverr:latest
-    container_name: reiverr
-    ports:
-      - 9494:9494
     volumes:
-      - ${APP_DATA_DIR}/data/config:/config
+      - ${APP_DATA_DIR}/daddyboi-reiverr/config:/config
     restart: unless-stopped
