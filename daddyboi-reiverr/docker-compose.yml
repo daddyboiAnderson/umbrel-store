@@ -1,13 +1,18 @@
 version: '3.8'
-
 name: reiverr
-
 services:
   reiverr:
     image: ghcr.io/just5ky/reiverr:master
     container_name: reiverr
     ports:
-      - 9494:9494
+      - '9494:9494'
     volumes:
       - ${APP_DATA_DIR}/config:/config
+    environment:
+      PUBLIC_RADARR_API_KEY: your_api_key
+      PUBLIC_RADARR_BASE_URL: http://public_ipadress
+      PUBLIC_SONARR_API_KEY: your_api_key
+      PUBLIC_SONARR_BASE_URL: http://public_ipadress
+      PUBLIC_JELLYFIN_API_KEY: your_api_key
+      PUBLIC_JELLYFIN_URL: http://public_ipadress
     restart: unless-stopped
