@@ -8,7 +8,7 @@ services:
       - COUCHDB_USER=admin # enter the desired CouchDB admin username
       - COUCHDB_PASSWORD=password # enter the desired CouchDB admin password
     volumes:
-      - ${APP_DATA_DIR}/etc/local.ini:/local.ini
+      - ${APP_DATA_DIR}/etc:/local.ini
       - ${APP_DATA_DIR}/data:/data
     ports:
       - 5984:5984
