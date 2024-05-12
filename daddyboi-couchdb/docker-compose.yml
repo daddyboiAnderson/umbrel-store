@@ -1,0 +1,15 @@
+version: "2.1"
+services:
+  couchdb:
+    image: couchdb
+    container_name: obsidian-livesync
+    user: 1000:1000
+    environment:
+      - COUCHDB_USER=admin # enter the desired CouchDB admin username
+      - COUCHDB_PASSWORD=password # enter the desired CouchDB admin password
+    volumes:
+      - ${APP_DATA_DIR}/etc/local.ini:/local.ini
+      - ${APP_DATA_DIR}/data:/data
+    ports:
+      - 5984:5984
+    restart: unless-stopped
