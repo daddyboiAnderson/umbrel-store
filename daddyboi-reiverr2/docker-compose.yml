@@ -4,7 +4,7 @@ name: reiverr
 
 services:
   reiverr:
-    image: ghcr.io/aleksilassila/reiverr:latest
+    image: ghcr.io/just5ky/reiverr:master
     container_name: reiverr
     ports:
       - 9494:9494

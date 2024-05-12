@@ -1,10 +1,10 @@
 manifestVersion: 1
-id: daddyboi-reiverr2
-name: Reiverr 2
+id: daddyboi-reiverr
+name: Reiverr
 tagline: A single UI for interacting with TMDB, Jellyfin, Radarr and Sonarr.
 icon: https://svgur.com/i/mvA.svg
 category: Development
-version: "0.8.2"
+version: "0.8.0"
 port: 9494
 description: >
   Reiverr is a project that aims to create a single UI for interacting with TMDB, Jellyfin, Radarr and Sonarr, as well as be an alternative to Overseerr.
